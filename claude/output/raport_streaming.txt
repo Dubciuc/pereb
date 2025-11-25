@@ -1,0 +1,61 @@
+
+================================================================================
+RAPORT: STREAMING - PROCESARE TIMP REAL
+Monitorizare și Detectare Tendințe în Timp Real
+================================================================================
+
+1. OBIECTIV
+   Simularea procesării streaming a fluxurilor turistice cu detectare
+   automată a anomaliilor și tendințelor emergente.
+
+2. METODOLOGIE
+   - Fereastră glisantă: 5 ani
+   - Prag alertă: 1.5σ (deviații standard)
+   - Metrici: Z-score, trend local, volatilitate
+
+3. ALERTE DETECTATE
+   Total: 19 anomalii
+
+   - An 1999: Z-score 2.19, Valoare 22,905
+   - An 2002: Z-score 1.53, Valoare 32,502
+   - An 2003: Z-score 3.40, Valoare 39,709
+   - An 2004: Z-score 2.29, Valoare 43,443
+   - An 2006: Z-score 1.81, Valoare 24,867
+   - An 2007: Z-score 1.54, Valoare 25,844
+   - An 2008: Z-score 2.63, Valoare 13,818
+   - An 2013: Z-score 2.08, Valoare 23,418
+   - An 2014: Z-score 1.65, Valoare 24,555
+   - An 2015: Z-score 1.92, Valoare 27,196
+   - An 2016: Z-score 1.57, Valoare 27,553
+   - An 2017: Z-score 3.22, Valoare 31,708
+   - An 2018: Z-score 2.77, Valoare 34,848
+   - An 2019: Z-score 2.01, Valoare 36,512
+   - An 2020: Z-score 5.05, Valoare 12,620
+   - An 2021: Z-score 1.50, Valoare 41,538
+   - An 2022: Z-score 1.78, Valoare 49,171
+   - An 2023: Z-score 3.72, Valoare 80,360
+   - An 2024: Z-score 4.06, Valoare 132,818
+
+4. TENDINȚE IDENTIFICATE
+   Perioada 2015-2019: Creștere stabilă
+   Perioada 2020-2024: Volatilitate ridicată (COVID-19, război)
+   
+   Recuperare: +952.4% față de 2020
+
+5. AVANTAJE STREAMING
+   ✓ Detectare rapidă anomalii
+   ✓ Adaptare în timp real
+   ✓ Alerte automate
+   ✓ Identificare tendințe emergente
+
+6. APLICAȚII PRACTICE
+   - Dashboard timp real pentru autorități turism
+   - Sistem alertă pentru evenimente neașteptate
+   - Recomandări adaptive campanii marketing
+   - Optimizare capacități (transport, cazare)
+
+7. FIȘIERE GENERATE
+   - 17_streaming_analysis.png
+   - 18_streaming_trends.png
+
+================================================================================

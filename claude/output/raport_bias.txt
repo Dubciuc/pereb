@@ -1,0 +1,141 @@
+
+================================================================================
+RAPORT: ANALIZA BIAS
+Identificarea și Cuantificarea Bias-ului Geografic în Fluxurile Turistice
+================================================================================
+
+1. DEFINIREA BIAS-ULUI
+   Bias-ul în contextul fluxurilor turistice se referă la favorizarea sistematică
+   a anumitor regiuni geografice sau țări în detrimentul altora, rezultând o
+   distribuție inegală și potențial inechitabilă a fluxurilor turistice.
+
+2. INDICATORI PRINCIPALI DE BIAS
+
+   A. COEFICIENT GINI: 0.944
+      - Interval: 0 (egalitate perfectă) - 1 (inegalitate maximă)
+      - Rezultat: 0.944 indică INEGALITATE SEVERĂ
+      - Interpretare: Concentrarea extremă a fluxurilor pe câteva țări
+
+   B. TEST CHI-SQUARE (2020-2024)
+      - χ² statistic: 470108.23
+      - p-value: 0.00e+00
+      - Concluzie: BIAS GEOGRAFIC SEMNIFICATIV DETECTAT (p < 0.05)
+      - Semnificație: Distribuția observată diferă semnificativ de o distribuție uniformă
+
+   C. CONCENTRARE TOP 5 ȚĂRI
+      - Medie istorică (1992-2024): 76.7%
+      - Valoare 2024: 93.0%
+      - Tendință: Creștere concentrare (bias crescut)
+
+   D. DIVERSITATE (Shannon Entropy)
+      - Medie istorică: 2.23
+      - Valoare 2024: 1.41
+      - Evoluție: Scădere diversitate (creștere bias)
+
+3. BIAS REGIONAL
+
+   Distribuția pe regiuni:
+   - Africa: 2 țări, 46 turiști (medie: 23)
+   - Altele: 93 țări, 514,851 turiști (medie: 5536)
+   - America: 10 țări, 2,011 turiști (medie: 201)
+   - Asia: 25 țări, 59,764 turiști (medie: 2391)
+   - CIS: 11 țări, 569,397 turiști (medie: 51763)
+   - Europa: 35 țări, 354,034 turiști (medie: 10115)
+
+   Observații:
+   - Dominanța regiunii: CIS (38.0% din total)
+   - Regiunea cu cea mai mică reprezentare: Africa
+
+4. BIAS GEOGRAFIC: ȚĂRI VECINE vs NON-VECINE
+
+   Țări vecine (România, Ucraina, Rusia, Belarus):
+   - Număr țări: 4
+   - Total turiști: 685,043
+   - Medie per țară: 171,260
+
+   Țări non-vecine:
+   - Număr țări: 172
+   - Total turiști: 815,060
+   - Medie per țară: 4,738
+
+   Ratio medie vecine/non-vecine: 36.1x
+   
+   Concluzie: BIAS SEMNIFICATIV către țări vecine
+
+5. EVOLUȚIA BIAS-ULUI ÎN TIMP
+
+   Perioada 1992-2000:
+   - Concentrare CIS: 69.8%
+   - Diversitate redusă, dominanță fostelor state sovietice
+
+   Perioada 2001-2010:
+   - Diversificare graduală
+   - Creștere ponderii europene
+
+   Perioada 2011-2019:
+   - Echilibrare relativă
+   - Creștere țări non-CIS
+
+   Perioada 2020-2024:
+   - Impact COVID-19: colaps parțial al diversității
+   - Recuperare 2023-2024: 65.3% creștere
+
+6. INDICATORI DE ECHITATE
+
+   A. Rata de participare medie pe regiuni:
+      - CIS: 87.6%
+      - Altele: 16.7%
+      - Asia: 51.2%
+      - Europa: 84.6%
+      - America: 45.8%
+      - Africa: 28.8%
+
+   B. Variabilitate intra-regională (coeficient de variație):
+      - CIS: 175.2%
+      - Altele: 872.8%
+      - Asia: 312.7%
+      - Europa: 289.9%
+      - America: 193.0%
+      - Africa: 141.4%
+
+   C. Theil Index (măsură inegalitate):
+      - Medie istorică: 2.006
+      - Valoare 2024: 2.669
+
+7. IMPLICAȚII ȘI RECOMANDĂRI
+
+   A. Probleme identificate:
+      - Concentrare excesivă pe câteva țări sursă
+      - Bias geografic semnificativ către țări vecine și CIS
+      - Subreprezentare regiuni îndepărtate (America, Asia, Africa)
+      - Volatilitate ridicată în perioade de criză
+
+   B. Recomandări pentru reducerea bias-ului:
+      1. Campanii de marketing țintite către regiuni subreprezentate
+      2. Diversificarea rutelor de transport internațional
+      3. Parteneriate cu agenții de turism din țări non-CIS
+      4. Programe de facilitare vize pentru țări îndepărtate
+      5. Promovare specifică în piețele asiatice și americane
+
+   C. Pentru modelare predictivă:
+      1. Utilizare tehnici de rebalansare (SMOTE, oversampling)
+      2. Ponderare samples pentru compensarea bias-ului
+      3. Stratificare pe regiuni în antrenare/validare
+      4. Evaluare separată pe grupuri minoritare
+      5. Metrici de fairness în plus față de acuratețea globală
+
+8. CONCLUZII
+
+   - Există un BIAS GEOGRAFIC SEMNIFICATIV în fluxurile turistice către Moldova
+   - Coeficientul Gini (0.944) indică inegalitate severă
+   - Concentrarea pe top 5 țări este foarte ridicată (76.7%)
+   - Țările vecine și CIS domină fluxurile (bias proximitate geografică)
+   - Tendință de diversificare observată post-2010, întreruptă de COVID-19
+   - Necesită intervenții active pentru echilibrarea surselor turistice
+
+9. FIȘIERE GENERATE
+   - 06_bias_geografic.png: Distribuție regională și Curba Lorenz
+   - 07_evolutie_bias.png: Evoluția temporală a bias-ului
+   - 08_echitate_geografica.png: Analiză echitate și comparații
+
+================================================================================

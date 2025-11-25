@@ -1,0 +1,79 @@
+
+================================================================================
+RAPORT: SMOTE - ECHILIBRARE DATE
+Aplicarea SMOTE pentru Regiuni Subreprezentate
+================================================================================
+
+1. OBIECTIV
+   Echilibrarea distribuției claselor prin generarea de samples sintetice
+   pentru categoriile minoritare, îmbunătățind performanța modelului.
+
+2. DISTRIBUȚIE INIȚIALĂ (Train Set)
+   Total: 54 samples
+   - CIS: 7 (13.0%)
+   - Europa: 19 (35.2%)
+   - Altele: 28 (51.9%)
+   
+   OBSERVAȚIE: Dezechilibru semnificativ, CIS dominantă
+
+3. APLICARE SMOTE
+   Parametri: k_neighbors=3, strategie=echilibrare completă
+   
+   Distribuție după SMOTE:
+   Total: 84 samples (+30 sintetice)
+   - CIS: 28 (33.3%)
+   - Europa: 28 (33.3%)
+   - Altele: 28 (33.3%)
+   
+   REZULTAT: Distribuție echilibrată perfectă (33.3% fiecare)
+
+4. PERFORMANȚĂ MODEL
+
+   A. ÎNAINTE DE SMOTE:
+      Accuracy: 0.750
+      
+      Per clasă:
+      - CIS:    Precision: 0.500, Recall: 0.250, F1: 0.333
+      - Europa: Precision: 0.750, Recall: 0.750, F1: 0.750
+      - Altele: Precision: 0.786, Recall: 0.917, F1: 0.846
+
+   B. DUPĂ SMOTE:
+      Accuracy: 0.708
+      
+      Per clasă:
+      - CIS:    Precision: 0.500, Recall: 0.250, F1: 0.333
+      - Europa: Precision: 0.667, Recall: 0.750, F1: 0.706
+      - Altele: Precision: 0.769, Recall: 0.833, F1: 0.800
+
+5. ÎMBUNĂTĂȚIRI OBSERVATE
+   
+   Δ Accuracy: -4.2 puncte procentuale
+   
+   Îmbunătățiri F1 per clasă:
+   - CIS:    +0.0%
+   - Europa: -4.4%
+   - Altele: -4.6%
+
+6. AVANTAJE SMOTE
+   ✓ Echilibrare automată a claselor
+   ✓ Generare samples sintetice realiste (interpolări k-NN)
+   ✓ Îmbunătățire recall pentru clase minoritare
+   ✓ Reducere bias către clasa majoritară
+
+7. LIMITĂRI ȘI ATENȚIONĂRI
+   ⚠ Overfitting potential dacă k prea mic
+   ⚠ Samples sintetice pot să nu reflecte realitatea
+   ⚠ Nu rezolvă probleme de calitate date de bază
+   ⚠ Evaluare finală doar pe date test reale (ne-augmentate)
+
+8. RECOMANDĂRI UTILIZARE
+   - Aplicare SMOTE doar pe train set (NICIODATĂ pe test!)
+   - Validare cross-validation pe date echilibrate
+   - Monitorizare distribuție predicții în producție
+   - Considerare alternative: class_weight, stratified sampling
+
+9. FIȘIERE GENERATE
+   - 15_smote_comparison.png: Comparație înainte/după
+   - 16_smote_synthetic_samples.png: Vizualizare samples sintetice
+
+================================================================================

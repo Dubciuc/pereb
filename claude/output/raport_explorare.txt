@@ -1,0 +1,67 @@
+
+================================================================================
+RAPORT: EXPLORARE ȘI PREPROCESARE DATE
+Analiza Fluxului de Turiști în Republica Moldova (1992-2024)
+================================================================================
+
+1. DESCRIERE DATASET
+   - Număr țări: 176
+   - Ani acoperire: 33 (1992-2024)
+   - Total turiști (1992-2024): 1,500,103
+   - Valori lipsă: 0
+
+2. ȚĂRI SURSĂ PRINCIPALE
+   Top 5 țări (total cumulat):
+      - Other countries 0 total: 465,395 turiști
+   - Russian Federation: 242,966 turiști
+   - Ukraine: 220,662 turiști
+   - Romania: 172,570 turiști
+   - Belarus: 48,845 turiști
+
+3. CATEGORII GEOGRAFICE
+   - Țări CIS: 11 țări
+     Total turiști CIS: 569,397 (38.0%)
+   
+   - Țări Non-CIS: 165 țări
+     Total turiști Non-CIS: 930,706 (62.0%)
+
+4. EVOLUȚIE TEMPORALĂ
+   - An cu flux maxim: 1992 (303,459 turiști)
+   - An cu flux minim: 2020 (12,620 turiști)
+   - Medie anuală: 45,457 turiști
+   - Deviație standard: 53,043
+
+5. EVENIMENTE MAJORE
+   - Scădere COVID-19 (2020): -65.4%
+   - Scădere război Ucraina (2022): 34.7%
+   - Recuperare 2024: 952.4%
+
+6. CONCENTRARE PIAȚĂ
+   - HHI mediu (1992-2024): 2166
+   - HHI 2024: 3636
+   - Interpretare: Concentrare ridicată
+
+7. TENDINȚE OBSERVATE
+   - Dominanța țărilor CIS în perioada 1992-2000
+   - Diversificarea surselor după 2000
+   - Creștere țări Non-CIS după 2010
+   - Impact sever COVID-19 în 2020
+   - Recuperare graduală post-pandemie
+   - Volatilitate ridicată în anii 2020-2024
+
+8. OBSERVAȚII PENTRU ANALIZE ULTERIOARE
+   - Dataset conține valori 0 (absența fluxurilor) - nu sunt valori lipsă reale
+   - Distribuție asimetrică: multe țări cu fluxuri mici, puține cu fluxuri mari
+   - Sezonalitate anuală și tendințe pe termen lung sunt evidente
+   - Necesită normalizare pentru analize comparative
+   - Potențial bias către țări vecine și CIS
+
+9. FIȘIERE GENERATE
+   - 01_evolutie_totala.png: Evoluția anuală totală
+   - 02_top15_tari.png: Top 15 țări sursă
+   - 03_heatmap_perioade.png: Intensitate pe perioade
+   - 04_distributii_statistice.png: Analiză statistică
+   - 05_tendinte_sezonalitate.png: Tendințe și comparații
+   - dataset_clean.csv: Dataset preprocesar
+
+================================================================================

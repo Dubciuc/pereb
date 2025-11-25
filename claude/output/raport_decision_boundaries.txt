@@ -1,0 +1,44 @@
+
+================================================================================
+RAPORT: DECISION BOUNDARIES
+Clasificarea Tipurilor de Turiști și Vizualizarea Frontierelor de Decizie
+================================================================================
+
+1. OBIECTIV
+   Separarea și clasificarea fluxurilor turistice pe baza caracteristicilor
+   temporale și volumetrice, identificând decision boundaries între categorii.
+
+2. CATEGORII DEFINITE
+   - CIS: 11 țări
+   - Europa: 34 țări
+   - Altele: 33 țări
+
+3. CARACTERISTICI UTILIZATE
+   - Total turiști (1992-2024)
+   - Medie anuală
+   - Deviație standard
+   - Activitate recentă (2020-2024)
+   - Activitate timpurie (1992-1996)
+   - Rata de participare
+
+4. REZULTATE PCA
+   - PC1 explică: 69.6% din varianță
+   - PC2 explică: 15.3% din varianță
+   - Total: 84.9%
+
+5. PERFORMANȚĂ MODELE
+   Decision Tree: Train 0.889, Test 0.625
+   SVM: Train 0.685, Test 0.625
+   Random Forest: Train 1.000, Test 0.583
+
+6. CONCLUZII
+   - Separare clară între categorii CIS vs Non-CIS
+   - Overlap între Europa și Altele (țări mici)
+   - Decision boundaries complexe necesită modele non-liniare
+
+7. FIȘIERE GENERATE
+   - 12_decision_boundaries.png
+   - 13_caracteristici_categorii.png
+   - 14_confusion_matrices.png
+
+================================================================================
